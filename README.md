@@ -28,7 +28,7 @@
 * Install [Docker](https://docs.docker.com/get-docker/)
 
 Após instalar docker e docker-compose
-<<<<<<< HEAD
+
 
 Baixe o projeto bitbucket 
  
@@ -57,6 +57,7 @@ Ele vai inciar a criação do container e baixar a imagem do ubuntu.
 
 Apos subir o container, se tudo deu certo!.
 Execute 
+
 ``` bash 
 docker container ls
 ```
@@ -84,6 +85,7 @@ systemctl status docker.services
 ```
 Se estiver com ambiente ok 
 Basta rodar na pasta raiz o comando docker-compose
+
 ```bash 
 docker-compose up -d 
 ```
@@ -92,6 +94,7 @@ Ele vai inciar a criação do container e baixar a imagem do ubuntu.
 
 Apos subir o container, se tudo deu certo!.
 Execute 
+
 ``` bash 
 docker container ls
 ```
