@@ -11,7 +11,7 @@ services:
     web:
         build: apache
         ports:
-            - 81:80
+            - 8081:80
         volumes:
             - ./apache/sites-enabled:/etc/apache2/sites-enabled
             - ./apache/sites-available:/etc/apache2/sites-available
