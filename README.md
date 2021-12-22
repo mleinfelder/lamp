@@ -102,5 +102,6 @@ docker container ls
 ele vai listar todos containers criados.
 verifiquei que porta usada para acessar seu apache2 do docker _porta_ _8081_ entao pode acessar [localhost:8081](http://localhost:8081) ou IP local porta 8081.
 
+
 >>>>>>> 154710a5012334b36d699f1efd4d364e8666f4fb
 
