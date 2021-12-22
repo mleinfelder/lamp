@@ -1,29 +1,65 @@
-# README #
+# Usando Docker para subir ambiente LAMP.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# Projetos arquivos.
 
-### What is this repository for? ###
+``` text  
+├── apache
+│   ├── apache2.conf.default
+│   ├── config_ssh
+│   ├── Dockerfile
+│   ├── sites-available
+│   │   └── 000-default.conf
+│   └── sites-enabled
+│       └── 000-default.conf -> ../sites-available/000-default.conf
+├── docker-compose.yml
+├── lamp
+├── locations.tx
+├── mysql
+│   ├── datadir
+|- Readm.md
+```
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+# Preparando ambiente 
 
-### How do I get set up? ###
+## Instalação do Docker 
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Acessa o site oficial e siga o procedimento.
 
-### Contribution guidelines ###
+* Install [Docker](https://docs.docker.com/get-docker/)
 
-* Writing tests
-* Code review
-* Other guidelines
+Após instalar docker e docker-compose
 
-### Who do I talk to? ###
+Baixe o projeto bitbucket 
+ 
+* Clone [Bitbucket](https://MarcioLeinfelder@bitbucket.org/marcioleinfelder/lampdocker.git)
 
-* Repo owner or admin
-* Other community or team contact# lamp
+``` bash 
+git clone https://MarcioLeinfelder@bitbucket.org/marcioleinfelder/lampdocker.git
+``` 
+
+Crie a pasta do projeto _/opt/sites_ na raiz do seu sistema.
+
+E baixe o aquivos do git para pasta do seus projetos habituais de preferencia _projetos/docker/lampdocker_
+ao entrar na pasta de sua preferencia verifique se serviço do docker esta rodando na sua maquina.
+como uso linux.
+
+``` bash 
+systemctl status docker.services
+```
+Se estiver com ambiente ok 
+Basta rodar na pasta raiz o comando docker-compose
+```bash 
+docker-compose up -d 
+```
+
+Ele vai inciar a criação do container e baixar a imagem do ubuntu.
+
+Apos subir o container, se tudo deu certo!.
+Execute 
+``` bash 
+docker container ls
+```
+
+ele vai listar todos containers criados.
+verifiquei que porta usada para acessar seu apache2 do docker _porta_ _8081_ entao pode acessar [localhost:8081](http://localhost:8081) ou IP local porta 8081.
+
